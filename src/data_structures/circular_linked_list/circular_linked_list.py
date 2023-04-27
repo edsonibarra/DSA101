@@ -1,7 +1,7 @@
 from src.data_structures.circular_linked_list.node import Node
 
 
-class CicularLinkedList:
+class CicularLinkedListObj:
     def __init__(self):
         self.head = None
 
@@ -33,16 +33,9 @@ class CicularLinkedList:
         if self.head is None:
             return
         current_node = self.head
-        while current_node is not self.head:
+        while current_node:
             print(f"[{current_node.data}]", end="->")
             current_node = current_node.next
-        print("None")
-    
-
-def main():
-    cll = CicularLinkedList()
-    cll.append(1)
-    cll.print_list()
-
-
-main()
+            if current_node is self.head:
+                break
+        print(f"Head Node: [{current_node.data}]")
