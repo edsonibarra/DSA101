@@ -1,7 +1,7 @@
 from src.data_structures.circular_linked_list.node import Node
 
 
-class CicularLinkedListObj:
+class CicularLinkedList:
     def __init__(self):
         self.head = None
 
